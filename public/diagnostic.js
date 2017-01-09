@@ -1,3 +1,4 @@
+import Ember from 'ember';
 /// Ember Object Diagnostic ///
 
 // Use Ember Objects and Classes to represent a shopping cart!
@@ -23,3 +24,18 @@
 //  -  Order 1 : 2 hats ($5 each)
 //  -  Order 2 : 1 desk lamp ($20 each)
 //  -  Order 3 : 3 hand towels ($8 each)
+
+const order = Ember.Object.extend({
+  // unitPrice:
+  // quantity:
+  orderPrice: Ember.computed(unitPrice, quantity, function(){
+    return `${this.get('unitPrice')} * ${this.get('quantity')}`;
+  })
+});
+
+const cart = Ember.Object.extend({
+  orders: [];
+  addToCart: function(){
+
+  }
+})

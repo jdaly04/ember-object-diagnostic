@@ -36,6 +36,9 @@ const order = Ember.Object.extend({
 const cart = Ember.Object.extend({
   orders: [];
   addToCart: function(){
-
+    // adds a given Item to an array called `orders`
   }
+  totalPrice: Ember.computed(orderPrice, function(){
+
+  })
 })
